@@ -1,0 +1,15 @@
+{
+    "main": "rpg.js",
+    "option": {
+        "apiLevel": 1,
+        "useUnifiedParams": false,
+        "useBabel": false,
+        "debugRoom": {
+            "name": "DEBUG ROOM",
+            "sender": "DEBUG",
+            "isGroupChat": true,
+            "packageName": "com.xfl.msgbot"
+        },
+        "scriptPower": true
+    }
+}

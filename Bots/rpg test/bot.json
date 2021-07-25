@@ -1,0 +1,9 @@
+{
+    "main": "rpg test.js",
+    "option": {
+        "apiLevel": 1,
+        "useUnifiedParams": false,
+        "useBabel": false,
+        "scriptPower": false
+    }
+}
