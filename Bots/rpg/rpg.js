@@ -37,17 +37,17 @@ function join_checker(user_name, replier){
 }
 
 function brief_status(user_name, replier){
-	replier.reply("당신의 현재 스탯\n이름 : " + status[user[sender]][0] +
-      "\n직업 : " + status[user[sender]][1] +
-      "\n레벨 : " + status[user[sender]][2] +
-      "\nhp : " + status[user[sender]][3] +
-      "\nmp : " + status[user[sender]][4] +
-      "\n건강 : " + status[user[sender]][5] +
-      "\n근력 : " + status[user[sender]][6] +
-      "\n지능 : " + status[user[sender]][7] +
-      "\n지혜 : " + status[user[sender]][8] +
-      "\n민첩 : " + status[user[sender]][9] +
-      "\n현재 위치 : " + status[user[sender]][10]);
+	replier.reply("당신의 현재 스탯\n이름 : " + status[user_name][0] +
+      "\n직업 : " + status[user_name][1] +
+      "\n레벨 : " + status[user_name][2] +
+      "\nhp : " + status[user_name][3] +
+      "\nmp : " + status[user_name][4] +
+      "\n건강 : " + status[user_name][5] +
+      "\n근력 : " + status[user_name][6] +
+      "\n지능 : " + status[user_name][7] +
+      "\n지혜 : " + status[user_name][8] +
+      "\n민첩 : " + status[user_name][9] +
+      "\n현재 위치 : " + status[user_name][10]);
 }
 
 function response(room, msg, sender, isGroupChat, replier, imageDB, packageName) {
