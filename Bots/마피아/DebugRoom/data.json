@@ -1,0 +1,12 @@
+{
+    "chats": [
+        {
+            "sender": "DEBUG SENDER",
+            "content": "test",
+            "timeMillis": 1627195388357,
+            "isBot": false,
+            "isLong": false,
+            "long": "\/storage\/emulated\/0\/kabot\/prototype-001\/Bots\/마피아\/DebugRoom\/message\/1627195388357-28258868422134}"
+        }
+    ]
+}

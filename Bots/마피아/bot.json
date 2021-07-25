@@ -1,15 +1,15 @@
 {
-    "main": "rpg.js",
+    "main": "마피아.js",
     "option": {
         "apiLevel": 1,
         "useUnifiedParams": false,
         "useBabel": false,
+        "scriptPower": true,
         "debugRoom": {
             "name": "DEBUG ROOM",
-            "sender": "DEBUG",
-            "isGroupChat": true,
+            "sender": "DEBUG SENDER",
+            "isGroupChat": false,
             "packageName": "com.xfl.msgbot"
-        },
-        "scriptPower": false
+        }
     }
 }
