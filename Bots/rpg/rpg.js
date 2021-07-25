@@ -36,6 +36,20 @@ function join_checker(user_name, replier){
     }
 }
 
+function brief_status(user_name, replier){
+	replier.reply("당신의 현재 스탯\n이름 : " + status[user[sender]][0] +
+      "\n직업 : " + status[user[sender]][1] +
+      "\n레벨 : " + status[user[sender]][2] +
+      "\nhp : " + status[user[sender]][3] +
+      "\nmp : " + status[user[sender]][4] +
+      "\n건강 : " + status[user[sender]][5] +
+      "\n근력 : " + status[user[sender]][6] +
+      "\n지능 : " + status[user[sender]][7] +
+      "\n지혜 : " + status[user[sender]][8] +
+      "\n민첩 : " + status[user[sender]][9] +
+      "\n현재 위치 : " + status[user[sender]][10]);
+}
+
 function response(room, msg, sender, isGroupChat, replier, imageDB, packageName) {
   if(msg == "@!ver" && (sender == "송성엽" || sender == "장호혁")) {
     replier.reply("현재 버전\nVersion 0.2");
@@ -63,17 +77,7 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
       invcon[user[sender]] = "";
       invetc[user[sender]] = "";
       replier.reply(status[user[sender]][0] + "님 가입에 성공하였습니다.");
-      replier.reply("당신의 현재 스탯\n이름 : " + status[user[sender]][0] +
-      "\n직업 : " + status[user[sender]][1] +
-      "\n레벨 : " + status[user[sender]][2] +
-      "\nhp : " + status[user[sender]][3] +
-      "\nmp : " + status[user[sender]][4] +
-      "\n건강 : " + status[user[sender]][5] +
-      "\n근력 : " + status[user[sender]][6] +
-      "\n지능 : " + status[user[sender]][7] +
-      "\n지혜 : " + status[user[sender]][8] +
-      "\n민첩 : " + status[user[sender]][9] +
-      "\n현재 위치 : " + status[user[sender]][10]);
+      brief_status(user[sender], replier);
       userdata += sender + ", " + user[sender] + "\n";
       for(i = 0; i < 11; i++) {
         userdata += status[user[sender]][i] + ", ";
@@ -96,17 +100,7 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
         invcon[user[sender]] = "";
         invetc[user[sender]] = "";
         replier.reply(status[user[sender]][0] + "님 가입에 성공하였습니다.");
-        replier.reply("당신의 현재 스탯\n이름 : " + status[user[sender]][0] +
-        "\n직업 : " + status[user[sender]][1] +
-        "\n레벨 : " + status[user[sender]][2] +
-        "\nhp : " + status[user[sender]][3] +
-        "\nmp : " + status[user[sender]][4] +
-        "\n건강 : " + status[user[sender]][5] +
-        "\n근력 : " + status[user[sender]][6] +
-        "\n지능 : " + status[user[sender]][7] +
-        "\n지혜 : " + status[user[sender]][8] +
-        "\n민첩 : " + status[user[sender]][9] +
-        "\n현재 위치 : " + status[user[sender]][10]);
+        brief_status(user[sender], replier);
         userdata += sender + ", " + user[sender] + "\n";
         for(i = 0; i < 11; i++) {
           userdata += status[user[sender]][i] + ", ";
@@ -123,17 +117,7 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
   
   if(msg == "!상태") {
     if(join_checker(user[sender], replier)) {
-      replier.reply("당신의 현재 스탯\n이름 : " + status[user[sender]][0] +
-      "\n직업 : " + status[user[sender]][1] +
-      "\n레벨 : " + status[user[sender]][2] +
-      "\nhp : " + status[user[sender]][3] +
-      "\nmp : " + status[user[sender]][4] +
-      "\n건강 : " + status[user[sender]][5] +
-      "\n근력 : " + status[user[sender]][6] +
-      "\n지능 : " + status[user[sender]][7] +
-      "\n지혜 : " + status[user[sender]][8] +
-      "\n민첩 : " + status[user[sender]][9] +
-      "\n현재 위치 : " + status[user[sender]][10]);
+      brief_status(user[sender]);
     }
   }
   
