@@ -64,7 +64,7 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
   }
   
   if(msg == "!가입") {
-    if(Object.keys(user).length == 0) {
+    if(Object.keys(user).length == 0 || user[sender] == null) {
       user[sender] = Object.keys(user).length;
       status[user[sender]][0] = sender;
       status[user[sender]][1] = "초보자";
@@ -87,31 +87,7 @@ function response(room, msg, sender, isGroupChat, replier, imageDB, packageName)
       DataBase.setDataBase("data", userdata);
     }
     else {
-      if(user[sender] == null) {
-        user[sender] = Object.keys(user).length;
-        status[user[sender]][0] = sender;
-        status[user[sender]][1] = "초보자";
-        status[user[sender]][2] = 1;
-        for(i = 3; i < 10; i++) {
-          status[user[sender]][i] = 5;
-        }
-        status[user[sender]][10] = map[0];
-        inveqi[user[sender]] = "";
-        invcon[user[sender]] = "";
-        invetc[user[sender]] = "";
-        replier.reply(status[user[sender]][0] + "님 가입에 성공하였습니다.");
-        brief_status(user[sender], replier);
-        userdata += sender + ", " + user[sender] + "\n";
-        for(i = 0; i < 11; i++) {
-          userdata += status[user[sender]][i] + ", ";
-        }
-        userdata = userdata.substring(0, userdata.length-2);
-        userdata += "\n";
-        DataBase.setDataBase("data", userdata);
-      }
-      else {
-        replier.reply(status[user[sender]][0] + "님은 이미 가입하셨습니다.");
-      }
+       replier.reply(status[user[sender]][0] + "님은 이미 가입하셨습니다.");
     }
   }
   
